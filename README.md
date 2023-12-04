@@ -71,15 +71,15 @@ En particulier, le MVP :
 + Une fois lancé revient sur le fichier détection_de_voiture.py et comment les deux lignes 111-112;
 + On est sur la page d'acceuil, on se dirige vers la partie services sur la barre de navigation;
 + On commence par le service parking owners pour fixer les positions des rectangles;
-+ Après, on télécharge l'image du parking vide avec le boutton "choose file" (vous trouverez un exemple avec les fonctions pythons);
-+ Une fenêtre permettant la sélection des spots apparait alors;
++ Après, on télécharge l'image du parking vide avec le boutton "choose file" (vous trouverez un exemple sur le dossier statit/uploads);
++ Une fenêtre permettant la sélection des spots apparait alors(les dimensions des rectangles sont ajustables);
 + On appuie sur "x" pour sortir;
 + Maintenant pour resetter, il faut partir a la fonction app.py et faire ctrl+s;
 + Maintenant tout est pret pour un conducteur;
 + Etant donnée une image du même parking à moitié rempli, on va afficher les spots vacants;
 + Pour ce faire, on se dirige vers la partie service du driver;
 + On clique  sur "show available spots" pour commencer;
-+ On upload la photo qu'on veut traiter et on clique sur "submit";
++ On upload la photo qu'on veut traiter(vous trouverez un exemple sur le dossier statit/uploads) et on clique sur "submit";
 + On trouve donc à gauche les spots disponibles et à droite l'image avec les labels des spots pour pouvoir se repérer.
 
 
