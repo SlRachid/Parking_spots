@@ -12,6 +12,10 @@ from keras import backend as k
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping
 from keras_vggface import utils
 import sklearn
+from zipfile import ZipFile
+import joblib
+import gzip
+import shutil
 
 
 files_train = 0
@@ -104,16 +108,32 @@ early = EarlyStopping(monitor='val_acc', min_delta=0,
 
 
 # Start training!
-# history_object = model_final.fit_generator(
-#  train_generator, epochs=3, validation_data=validation_generator, callbacks=[checkpoint, early])
+'''history_object = model_final.fit_generator(
+  train_generator, epochs=3, validation_data=validation_generator, callbacks=[checkpoint, early])'''
 
 
+# Save the model 
+'''joblib.dump(model_final, 'trained_model.pkl')'''
 
-#model_uploaded=model_final.save("./trained_model")
-restored_keras_model = tf.keras.models.load_model("./trained_model")
+# Compress the model file
+'''with open('trained_model.pkl', 'rb') as f_in:
+    with gzip.open('trained_model.pkl.gz', 'wb') as f_out:
+        shutil.copyfileobj(f_in, f_out)
+'''
+# Clean up: Remove the uncompressed model file if needed
+# Optional, depends on whether you want to keep the uncompressed file
 
+'''os.remove('trained_model.pkl')'''
 
-# history_object = restored_keras_model.fit(train_generator, epochs=3)
+with gzip.open('trained_model.pkl.gz', 'rb') as f_in:
+    with open('trained_model.pkl', 'wb') as f_out:
+        shutil.copyfileobj(f_in, f_out)
+
+# Load the model
+restored_keras_model = joblib.load('trained_model.pkl')
+
+os.remove('trained_model.pkl')
+
 
 
 
@@ -159,8 +179,8 @@ def final(pred_res,coord_rectangles):
 
 
 
-# if __name__ == "__main__":
-#     folder = '../Dataset'
+if __name__ == "__main__":
+    folder = '../data/test_data'
 
-#     for img_url in os.listdir(folder)[:14]:
-#         print((img_url, pred('../Dataset/'+img_url)))
+    for img_url in os.listdir(folder)[:14]:
+        print((img_url, pred('../data/test_data/'+img_url)))

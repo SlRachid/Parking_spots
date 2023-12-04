@@ -67,7 +67,8 @@ En particulier, le MVP :
 ## Consignes d'utilisation :
 + Le projet est le dossier codingweeks dans le repertoire git, donc on commence par se placer dans le dossier sur le terminal;
 + Au debut, il n'y a pas de cache (normalement);
-+ On lance l'app.py (l'app flask);
++ On lance l'app_original.py (l'app flask);
++ Une fois lancé revient sur le fichier détection_de_voiture.py et comment les deux lignes 111-112;
 + On est sur la page d'acceuil, on se dirige vers la partie services sur la barre de navigation;
 + On commence par le service parking owners pour fixer les positions des rectangles;
 + Après, on télécharge l'image du parking vide avec le boutton "choose file" (vous trouverez un exemple avec les fonctions pythons);
