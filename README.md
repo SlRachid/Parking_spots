@@ -80,3 +80,12 @@ En particulier, le MVP :
 + On clique  sur "show available spots" pour commencer;
 + On upload la photo qu'on veut traiter et on clique sur "submit";
 + On trouve donc à gauche les spots disponibles et à droite l'image avec les labels des spots pour pouvoir se repérer.
+
+
+
+## Some errors you could encounter :
++ in the keras library there some things missing that are now in tensorflow like layer_utils and get_file, but in vggface these changes are still not udated so you could have to change in the keras_vggface.vggface : "keras.utils" to "tensorflow.python.keras.utils" 
++ There is also one error concerning the topology. In the keras_vggface/models.py file, you could have to change the import from:
+"from keras.engine.topology import get_source_inputs"
+to:
+"from keras.utils.layer_utils import get_source_inputs"
