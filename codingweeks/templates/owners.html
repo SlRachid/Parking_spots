@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container jumbotron text-center" style="margin:30px">
+        
+        
+        
+            <h2 class="bd-title" id="content">Select the photo of the empty parking</h2>
+            <hr style="height:2px;border:none;color:#333;background-color:#333;">
+            <p class="bd-lead">
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </p>
+            
+            <form method="post" action="/upload" enctype="multipart/form-data">
+                <dl>
+                    <p>
+                        <input type="file" name="file" class="form-control" autocomplete="off" required>
+                    </p>
+                </dl>
+                <p>
+                    <input type="submit" value="Submit" class="btn btn-secondary">
+                </p>
+            </form>
+        
+        
+        
+    </div>
+ 
+    
+
+    
+  {% endblock %}

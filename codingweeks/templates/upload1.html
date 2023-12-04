@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+    
+
+
+
+    
+{% block body %}
+<div class = "jumbotron container" style ="margin-top: 100px;height:auto;padding-bottom: 60px;" >
+    <h1><center>Results</center><h1/>
+        <hr>
+    <div class="container">
+    <div class="row justify-content-center" >
+        
+        
+        <div class="col-4" style="font-size: 20px;">
+            <h4 class="bd-title" id="content">Select a file to upload</h4>
+            <hr style="height:2.5px;border:none;color:#333;background-color:#333;">
+            <div class="row">
+                <p>
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <ul>
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
+                </p>
+                {% if filename %}
+                    <div >
+                        <img src="{{ url_for('display_image', filename=filename) }}" width="100%">
+                        
+                    </div>
+                {% endif %}
+                
+            </div>
+            
+            
+        </div>
+        <hr style="border:none;border-left:1px solid hsla(200, 10%, 50%,100);height :auto;width:1px;">
+        <div class="col-4" style="font-size: 20px; ">
+            
+            <h4 class="bd-title" id="content">Available spots</h4>
+            <hr style="height:2.5px;border:none;color:#333;background-color:#333;">
+            
+            <div class="list-group">
+                
+                {% for element in Data%}
+                  <li >
+                    <a >{{element.id}}  :  {{element.statut}}</a>
+                    <hr style="color: #373737;">
+                  </li>
+                  
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>   
+
+
+
+{% endblock %}
+
+

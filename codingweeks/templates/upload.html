@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container jumbotron text-center" style="margin:30px">
+        
+        
+        <div>
+            <h2 class="bd-title" id="content">Select the photo of the empty parking</h2>
+            <hr style="height:2px;border:none;color:#333;background-color:#333;">
+            <p class="bd-lead">
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </p>
+            {% if filename %}
+                <div>
+                    <img src="{{ url_for('image1') }}" width="100%"/> 
+                </div>
+            {% endif %}
+            
+        </div>
+        <div style="margin-top:30px">
+        <a href="/owner_action">
+            <button class="btn btn-secondary btn-sm" style="font-size: 18px;" style="font-style: arial ;">Identify parking spots</button>
+        </a>
+        </div>
+    
+    </div>
+ 
+    
+
+    
+  {% endblock %}
