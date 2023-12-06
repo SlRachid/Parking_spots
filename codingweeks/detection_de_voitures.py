@@ -125,6 +125,8 @@ early = EarlyStopping(monitor='val_acc', min_delta=0,
 
 '''os.remove('trained_model.pkl')'''
 
+
+# import the saved model file
 with gzip.open('trained_model.pkl.gz', 'rb') as f_in:
     with open('trained_model.pkl', 'wb') as f_out:
         shutil.copyfileobj(f_in, f_out)

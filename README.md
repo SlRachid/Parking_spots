@@ -14,56 +14,6 @@ En particulier, le MVP :
 * Affichera le résultat de l'ensemble des places vides du parking.
 
 
-## Sprints :
-
-**Sprint 0 :** Analyse des besoins et conception du produit
-
-**Sprint 1 :** Détection et identification des places existant dans le parking
-
-* *Fonctionnalité 1* : Charger l'image du parking et sélectionner les places qui s'y trouvent.  
-
-* *Fonctionnalité 2* : Extraire les images des places du parking et les stocker dans un dossier  
-
-**Sprint 2 :** vérification de la présence ou non d'une voiture sur une place du parking
-
-* *Fonctionnalité 1 *: Construire une base de données constituée d'images de places de parking vacantes et d'autres occupées à partir de photos aériennes de différents parkings.
-
-* *Fonctionnalité 2* : Créer et entraîner un réseau de neurones sur une partie de la base de données.
-
-* *Fonctionnalité 3* : Tester le réseau de neurones sur d'autres images.
-
-**Sprint 3 :** Mise en place du site Web  
-* *Fonctionnalité 1* : fournir une platforme interactive à l'utilisateur.    
-
-* *Fonctionnalité 2* : permettre à l'utilisateur d'uploader une image.   
-
-* *Fonctionnalité 3* : afficher l'image traitée et la liste des places libres.   
-
-## The DytyCS team :
-1. **D**EMRI Lina :
-* Construction du site Web
-* Préparation de la présentation   
-2. **Y**EBARI Moghit : 
-* Détection et stockage des places de stationnement
-* Construction et enrichissement de la base de données
-* Rassemblement de la fonction main()
-* 
-3. **T**BATOU Hamza :
-* Construction la base de données 
-* Entraînement réseau de neurones
-* Codage des fonctions tests
-4. **Y**ARTAOUI Farouk : 
-* Identification des places de parking
-* Rassemblement de la fonction main()
-* Construction de la base de données
-* Codage des fonctions tests
-5. **C**HAFIK Hala : 
-* Identification des places du parking 
-* Construction de la base de données
-* Préparation de la présentation PowerPoint.
-6. **S**LIMANI Rachid : 
-* Structuration et entraînement du réseau de neurones 
-* Création du site Web
 ## Consignes d'utilisation :
 + Le projet est le dossier codingweeks dans le repertoire git, donc on commence par se placer dans le dossier sur le terminal;
 + Au debut, il n'y a pas de cache (normalement);
